@@ -11,7 +11,7 @@ class PagesSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('articles')->insert([
+        DB::table('pages')->insert([
             [
                 'id' => '1',
                 'title' => 'Кутхины Баты - уникальный природный памятник Камчатки',
@@ -45,6 +45,7 @@ class PagesSeeder extends Seeder
                 'meta_description' => '',
                 'meta_keywords' => '',
                 'public' => '1',
-            ]]);
+            ]
+        ]);
     }
 }
