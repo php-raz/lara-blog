@@ -14,8 +14,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        \View::share('menu',Page::all());
-
+        if (app()->runningInConsole() === false) {
+            \View::share('menu',Page::all());
+        }
     }
 
     /**
